@@ -36,9 +36,7 @@ a.txt   # a.txt 파일
 .ipynb_checkpoints/ # .ipynb_checkpoints 폴더
 ```
 
-프로젝트 시작시 어떠한 내용을 담아야 할 지 모르겠다면, 
-
-[gitignore](http://gitignore.io/)에서 검색한다.
+프로젝트 시작시 어떠한 내용을 담아야 할 지 모르겠다면, [gitignore](http://gitignore.io/)에서 검색한다.
 
 예) `python`, `r`, `jupyter notebook` 
 
