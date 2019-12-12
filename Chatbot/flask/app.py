@@ -69,6 +69,31 @@ def naver():
 def google():
     return render_template('google.html')
 
+# 사용자로부터 입력받을 페이지를 ㄴ
+@app.route('/vonvon')
+def vonvon():
+    return render_template('vonvon.html')
+
+@app.route('/godmademe')
+def godmademe():
+    name=request.args.get('name')
+    # 데이터 리스트
+    first_options=['잘생김','못생김','존잘','존못','쏘쏘']
+    second_options=['친절함','싹수','애교','잘난척']
+    third_options=['돈복','코딩력','물욕','식욕']
+    # 각 데이터 리스트별로 요소를 하나씩 무작위로 뽑음
+
+    # sample 사용한 경우(list 형태로 들어옴)
+     #tmp = random.sample(first_options,1)
+     #print(tmp,type(tmp,tmp[0]))
+
+    #choice 사용한 경우 (str형태로 들어옴)
+    first = random.choice(first_options) 
+    second = random.choice(second_options) 
+    third = random.choice(third_options) 
+ 
+    return render_template('godmademe.html',name=name,first=first,second=second,third=third)
+
 # app.py 가장 하단에 위치
 # 1. 앞으로 flask run으로 서버를 켜는 게 아니라, python app.py로 서버를 실행한다.
 # 2. 내용이 바뀌어도 서버를 켰다 껐다 안해도 된다.
