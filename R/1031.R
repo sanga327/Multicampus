@@ -27,7 +27,7 @@ request_url #API호출 주소를 만듦
 
 # Open API를 사용할 때 거의 대부분 인증절차를 거쳐야 사용 가능
 
-apikey <- "2b79b617bc0b50e0ef548a0d123099a7"  # 로그인해서 발급받은 키
+apikey <- "로그인해서 발급받은 키"  
 
 # web에서 클라이언트가 서버쪽 프로그램을 호출할 때 호출방식이라는 것이 있음
 # 호출방식 4가지 : GET, POST, PUT, DELETE (기본적으로 4가지 방식)
@@ -45,7 +45,7 @@ result <- GET(request_url,
 # 호출해서 가져오면 data frame으로 오는게 아니라 응답 객체로 있어서 content()해줘야 실제 내가 서버로부터 받은 제이슨 데이터를 데이터프레임형태로 가져올 수 있다.  
 # 편한 것은 jsonlite의 fromJSON 이 편함. httr 패키지의 이거 이용해서 fromJSON을 만든 것. 
 #fromJSON 으로도 사실 가능하기는 하나 전형적인 형태의 패키지와 전형적인 함수 사용법을 알아본 것 
-# json만 가져온 것 뿐 아니라 이미지 경롤 다시 뽑아서 밑에서 다시 반복적으로 호출. but json이 아니라 raw data 가져옴 
+# json만 가져온 것 뿐 아니라 이미지 경로를 다시 뽑아서 밑에서 다시 반복적으로 호출. but json이 아니라 raw data 가져옴 
 #binary하려면 raw 붙이면 raw 데이터 가져올 수 있음 
 
 
